@@ -24,3 +24,9 @@ console.log(typeof true);
 console.log(typeof null);
 console.log(typeof undefined);
 
+// 변수선언하기
+// var 선언
+console.log('===============================================');
+var num1; //저장공간
+console.log(num1 = 10); //num1 저장공간
+console.log(num1); //저장된 값
