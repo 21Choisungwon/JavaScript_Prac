@@ -1,0 +1,46 @@
+연산자
+    관계(비교) 연산자 --> 조건이다
+        해당 조건이 참이라면 무엇을 실행시켜줘
+        거짓이라면 무엇을 실행시켜줘
+        null undefined
+
+
+
+    null == undefined //true
+    null === undefined //false
+    null != undefined //false
+    null !== undefined // true
+
+    NaN == '안녕' //false
+
+논리연산자
+    연산의 동작은 각각
+        and
+        or 
+        or 로 동작한다
+    연산의 결과는 각각
+    맥락 평가에 따라 달라진다.
+
+    a && b -->AND 연산
+        a 그리고 b 둘다 true라면 결과는 true
+        아니면 false
+    a || b -->OR 연산
+        a 혹은 b 둘중 하나라도 true라면 결과는 true
+        아니면 false
+    a ?? b
+
+    !A  -->단항 연산 ,NOT연산
+        A가 true라면 결과는 false
+        A가 false라면 결과는 true
+
+
+여러개의 연산자가 중첩되어 사용되면 연산자의 우선순위에 따라 해석된다
+
+최우선 연산자       ()  
+단항 연산자         !   typeof
+산술 연산자         + - * / % **
+쉬프트 연산자 
+    관계 연산자     > < >= <= == === != !===
+  논리 연산자       && ||
+    삼항 연산자
+    대입 연산자     =
