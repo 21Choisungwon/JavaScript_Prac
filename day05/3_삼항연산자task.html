@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #e9e9e9;
+            text-align: center;
+        }
+        h4{
+            font-size: 54px;
+            color: aqua;
+            font-weight: 900;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>삼항연산자를 활용하여 결과 보여주기</h2>
+    <input type="text" id="cnt" placeholder="라면의 갯수 입력">
+    <button onclick="getRes()">확인</button>
+    <h3>필요한 상자의 갯수</h3>
+    <h4></h4>
+    <script>
+        function getRes(){
+            //getRes()함수가 실행되면 getRes 함수 안쪽 코드가 위에서부터 실행된다
+            document.querySelector('#cnt');
+            let num = document.querySelector('#cnt').value;
+            let res = Number(num / 20);
+            
+            // num에는 사용자가 input태그에 쓴 값이 들어있다.
+
+            //로직
+            // 한 상자 당 20개의 라면이 들어간다
+            // 라면의 갯수를 입력 받아서 라면을 포자하기 위해 필요한 상자의 갯수를
+            // 결과로 출력하시오
+            // document.write('<h4>15개</h4>')
+
+            document.querySelector('h4').innerText = res+'개';
+        }
+    </script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 console.log('1번 js 파일');
 
-let ar = ['김철수',10,true,[1,2,3]];
+let ar = ['김철수',10,true,[1,2,3]];    //같은 타입이 아닌 값을 배열에 넣는것은 추천하지않음
 
 console.log(ar);
 console.log(ar[0]);

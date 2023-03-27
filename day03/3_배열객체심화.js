@@ -18,7 +18,7 @@ let book = {title:'책제목', price : 10000};
 const {title,price,page} = book;
 console.log(price);
 console.log(title);
-console.log(page);
+console.log(page);      //undefined
 
 
 
@@ -35,7 +35,7 @@ console.log(ar[1]);
 // ar4 배열의 0번쨰 방을 100으로 바꿨을 때
 // ar3는 여전히 [10,20,30] 이면 성공
 let ar3 = [10,20,30];
-let ar4 = ar3;
+let ar4 = [ar[0],ar[1],ar[2],ar[3]];
 ar4[0] = 100;
 console.log(ar3);
 console.log(ar4);
