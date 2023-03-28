@@ -29,8 +29,6 @@
             //getRes()함수가 실행되면 getRes 함수 안쪽 코드가 위에서부터 실행된다
             document.querySelector('#cnt');
             let num = document.querySelector('#cnt').value;
-            let res = Number(num / 20);
-            
             // num에는 사용자가 input태그에 쓴 값이 들어있다.
 
             //로직
@@ -38,8 +36,10 @@
             // 라면의 갯수를 입력 받아서 라면을 포자하기 위해 필요한 상자의 갯수를
             // 결과로 출력하시오
             // document.write('<h4>15개</h4>')
-
-            document.querySelector('h4').innerText = res+'개';
+            let res = num%20 ===0 ? num/20 : num /20 +1;
+            document.querySelector('h4').innerText =`${parseInt(res)}개`;
+            //parseInt() 정수로 바꾸어 주는 함수 
+            // Math.ceil() ; --> 소수를 올림 해주는 함수
         }
     </script>
 </body>
