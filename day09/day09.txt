@@ -1,0 +1,91 @@
+DOM 객체 (key와 value값으로 이루어져있을것이다.)
+    DOM 객체 속의 key값이 의미하는 바가 무엇일까??
+
+html                    -->javascript
+<div>안녕하세요</div>       -->let myDiv{
+                                tagName: "div",
+                                innerText:"안녕하세요",
+                                ....
+                                }
+                                mtDiv.innerText = '반가워';
+
+
+
+자바스크립트 이벤트
+    이벤트란? 특정 변화에 대한 사건
+    득정 변화에 대한 사건? 
+    ===> 더블클릭, 클릭 , 마우스 커서이동,마우스크롤 (마우스관련 이벤트)
+         특정키를 눌렀다, 눌렀다땠다..(키보드관련 이벤트)
+         트렌지션이 끝났다, input태그 내의 변화가 생겼을 떄...
+
+이벤트를 설정하는방법
+
+1. on이벤트이름 패턴으로 html  속성을 만들어놨다,
+    그 속성의 속성값으로 이벤트가 발생했을때 실행시키고자하는
+    함수를 호출(사용, 함수이름디에 소괄호를사용)한다.
+    ex)<div onclick="함수()" onmousemove = "함수2()">안녕하세요</div>
+
+2. 해당 태그 객체를 받아와서, 직접 key값에다 함수(소괄호xxx)를 대입하기
+    ex)<div>안녕하세요</div>
+
+        2-1 
+        자바스크립트로 받아오기 -->getelementByid.....
+        let myDiv={
+            innerTExt:"안녕하세요",
+            innerHtml:"안녕하세요",
+            style:(fontSize:'15px',color:'black'),
+            ....,
+            onclick:null,
+            onmousemove:null,
+            onkeypredded:null,
+            ....
+
+        }
+
+        2-2 
+        myDiv.onclick = 함수;
+
+        let a = add;        -->add의 주소값을 a에 대입
+        let a = add();      -->add함수의 실행 결과를 a에 대입
+
+3. addEventListner 함수 사용 -->태그 객체내부에 들어있음
+    <div>안녕하세요</div>
+
+    let myDiv = {
+            innerTExt:"안녕하세요",
+            innerHtml:"안녕하세요",
+            style:(fontSize:'15px',color:'black'),
+            ....,
+            onclick:null,
+            ...
+
+            addEventListner:function(a,b){
+                ...;
+                ...;
+                ...;
+            }
+            classList:... ,
+    }
+
+    //myDiv.addEventListner(이벤트종류, 해당이벤트가발생헀을떄 실행시킬 함수); -->반드시 매개변수 2개 필요
+    ex) myDiv.addEventListner('mouseMoveEvent',add);
+    -->이벤트 이름 자체는 on이 붙지않음!
+
+
+
+event객체
+    event가 발생하면 실행시킬 함수의 매개변수에는
+    발생한 이벤트에 대한 모든 정보가 들어있는 객체가 인자값으로 전달된다
+    이떄, event 객체 안의 target 번째 방에는(key에는) 이벤트가 발생된
+    요소 객체가 들어있다.
+
+    html 코드에다가 onclick 속성에 직접 함수를 사용하는 방식에서는
+    인자를 event 라는 이름으로 반드시 넘겨줘야한다.
+    ex)<div onclick="mtFunc(event)"></div>
+    하지만 이 방식은 특정브라우저에서만 지원한다.
+
+    event 객체를 사용하는 경우라면
+    객체.onclick = 함수;
+    혹은
+    객체.addEventListner(이벤트,함수);
+    방식을 사용하는 것이 바람직하다.

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<style>
+    * {
+        padding: 0;
+
+    }
+
+    .container {
+        display: flex;
+        gap: 20px;
+    }
+
+    .box {
+        flex-direction: column;
+        background-color: #e9e9e9;
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        line-height: 100px;
+    }
+</style>
+<!-- css끝 -->
+
+<body>
+    <div class="container">
+        <div class="box" onclick="onClick_fn()" id="box1">1</div>
+        <div class="box" id="box2">2</div>
+        <div class="box" id="box3">3</div>
+        <div class="box" id="box4">4</div>
+    </div>
+</body>
+</html>
+
+<script>
+    console.log('연결됨');
+    //첫번쨰 방법
+    //html 코드에다가 적용시킬 이벤트에 함수를 넣어 사용함
+    let onClick_fn = function () {
+        let box1 = document.querySelector('#box1');
+        box1.textContent = '안녕';
+        box1.style.backgroundColor = 'red';
+
+    }
+
+    //두번째 방법
+    //자바스크립트 코드에서 직접 onclick이라는 키 값에 만들어놓은 함수 대입
+    let box2 = document.querySelector('#box2');
+
+    let onClick_fn2 = function () {
+        let tmp = document.querySelector('#box2');
+        tmp.style.backgroundColor = 'green';
+    }
+    box2.onclick = onClick_fn2;
+
+    //세번쨰 방법
+    //addEventListner('이벤트이름',함수)
+    //'이벤트 이름에서 on 생략해야함'**
+    let box3 = document.querySelector('#box3');
+    box3.addEventListener('click',
+     (e) => {
+        let tmp = e.target;
+        tmp.style.backgroundColor = 'blue';
+    });
+</script>

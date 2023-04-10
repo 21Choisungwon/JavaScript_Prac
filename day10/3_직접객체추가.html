@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기능들</title>
+    <link rel="stylesheet" href="./carousel.css">
+</head>
+<body>
+    <div class="container">
+        <h1>input 태그 유효성 검사</h1>
+        <input id="input-id" type="text" placeholder="id를 입력하시오"/>
+        <p id="id-msg" class="input-msg"></p>
+        <input id="input-pw" type="text" placeholder="pw를 입력하시오"/>
+        <p id="pw-msg" class="input-msg"></p>
+    </div>
+
+    <div class="container">
+        <h1>캐러셀 디자인</h1>
+        <div class="carousel-container">
+            <div class="carousel-contents">
+                <!-- <div class="carousel-item" style="background-color: red;">1</div>
+                <div class="carousel-item" style="background-color:orange">2</div>
+                <div class="carousel-item" style="background-color:yellow">3</div>
+                <div class="carousel-item" style="background-color:green">4</div>
+                <div class="carousel-item" style="background-color:aqua">5</div> -->
+            </div>
+            <button onclick="onCarouselButtonClick('left')"><</button>
+            <button onclick="onCarouselButtonClick('right')">></button>
+        </div>
+
+    </div>
+    
+    <script src="./2_기능.js"></script>
+    <script src="./domTree.js"></script>
+</body>
+</html>
